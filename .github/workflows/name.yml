@@ -15,7 +15,7 @@ jobs:
       run: rsync -zhrv ./* ubuntu@15.206.74.210:/home/ubuntu/test
       
     - name: Uploading to s3 Deployment server
-      run: aws s3 cp index.html s3://demo-github-bucket
+      run: aws s3 cp main.html s3://demo-github-bucket
     
       # aws s3api put-object-acl --bucket "$S3_BUCKET" --key index.html --acl public-read
     #env:
